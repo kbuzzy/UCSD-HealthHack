@@ -54,7 +54,7 @@ public abstract class Canvas extends JPanel implements KeyListener, MouseListene
     // This method is overridden in Framework.java and is used for drawing to the screen.
     public abstract void Draw(Graphics2D g2d);
     
-    @Override
+    
     public void paintComponent(Graphics g)
     {
         Graphics2D g2d = (Graphics2D)g;        
@@ -76,20 +76,20 @@ public abstract class Canvas extends JPanel implements KeyListener, MouseListene
     }
     
     // Methods of the keyboard listener.
-    @Override
+    
     public void keyPressed(KeyEvent e) 
     {
         keyboardState[e.getKeyCode()] = true;
     }
     
-    @Override
+    
     public void keyReleased(KeyEvent e)
     {
         keyboardState[e.getKeyCode()] = false;
         keyReleasedFramework(e);
     }
     
-    @Override
+    
     public void keyTyped(KeyEvent e) { }
     
     public abstract void keyReleasedFramework(KeyEvent e);
@@ -121,25 +121,25 @@ public abstract class Canvas extends JPanel implements KeyListener, MouseListene
     }
     
     // Methods of the mouse listener.
-    @Override
+ 
     public void mousePressed(MouseEvent e)
     {
         mouseKeyStatus(e, true);
     }
     
-    @Override
+
     public void mouseReleased(MouseEvent e)
     {
         mouseKeyStatus(e, false);
     }
     
-    @Override
+
     public void mouseClicked(MouseEvent e) { }
     
-    @Override
+
     public void mouseEntered(MouseEvent e) { }
     
-    @Override
+
     public void mouseExited(MouseEvent e) { }
     
 }

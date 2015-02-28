@@ -14,7 +14,7 @@ public class Window extends JFrame{
     private Window()
     {
         // Sets the title for this frame.
-        this.setTitle("Game title");
+        this.setTitle("BFeedingApp");
         
         // Sets size of the frame.
         if(false) // Full screen mode
@@ -47,7 +47,6 @@ public class Window extends JFrame{
     {
         // Use the event dispatch thread to build the UI for thread-safety.
         SwingUtilities.invokeLater(new Runnable() {
-            @Override
             public void run() {
                 new Window();
             }
